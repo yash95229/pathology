@@ -1,0 +1,9 @@
+<div class="card p-3">
+  <h4>Result Entry</h4>
+
+  <input class="form-control mb-2" placeholder="Order ID" type="number" [(ngModel)]="orderId">
+  <input class="form-control mb-2" placeholder="Result Value" [(ngModel)]="formData.resultValue">
+  <textarea class="form-control mb-2" placeholder="Technician Notes" [(ngModel)]="formData.technicianNotes"></textarea>
+
+  <button class="btn btn-warning" (click)="saveResult()">Save Result</button>
+</div>

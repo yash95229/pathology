@@ -1,0 +1,26 @@
+<div class="card p-3 mb-4">
+  <h4>Create Order</h4>
+
+  <input class="form-control mb-2" placeholder="Patient Name" [(ngModel)]="formData.patientName">
+  <input class="form-control mb-2" placeholder="Phone" [(ngModel)]="formData.phone">
+  <input class="form-control mb-2" placeholder="Test ID" type="number" [(ngModel)]="formData.testId">
+
+  <button class="btn btn-success" (click)="saveOrder()">Create Order</button>
+</div>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Order No</th>
+      <th>Patient</th>
+      <th>Status</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>{{order.orderNumber}}</td>
+      <td>{{order.patientName}}</td>
+      <td>{{order.status}}</td>
+    </tr>
+  </tbody>
+</table>

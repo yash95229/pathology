@@ -1,0 +1,69 @@
+<div class="card p-3 mb-4">
+
+  <h4>Create Test</h4>
+
+  <input
+    class="form-control mb-2"
+    placeholder="Test Name"
+    [(ngModel)]="formData.testName">
+
+  <input
+    class="form-control mb-2"
+    placeholder="Test Code"
+    [(ngModel)]="formData.testCode">
+
+  <input
+    class="form-control mb-2"
+    placeholder="Sample Type"
+    [(ngModel)]="formData.sampleType">
+
+  <input
+    class="form-control mb-2"
+    placeholder="Normal Range"
+    [(ngModel)]="formData.normalRange">
+
+  <input
+    type="number"
+    class="form-control mb-2"
+    placeholder="Price"
+    [(ngModel)]="formData.price">
+
+  <button class="btn btn-primary" (click)="saveTest()">
+    Save Test
+  </button>
+
+</div>
+
+<hr>
+
+<h4>Saved Tests</h4>
+
+<table class="table table-bordered mt-3">
+
+  <thead>
+
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Code</th>
+      <th>Sample</th>
+      <th>Price</th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+
+    <tr *ngFor="let test of tests">
+
+      <td>{{test.id}}</td>
+      <td>{{test.testName}}</td>
+      <td>{{test.testCode}}</td>
+      <td>{{test.sampleType}}</td>
+      <td>{{test.price}}</td>
+
+    </tr>
+
+  </tbody>
+
+</table>
